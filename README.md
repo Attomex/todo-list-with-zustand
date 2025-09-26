@@ -5,10 +5,10 @@
 
 # Скриншотики
 ### Мои задачи
-![Мои задачи](readme-images\image.png)
+![Мои задачи](./readme-images/image.png)
 
 ### Создание задачи
-![Создание задачи](readme-images\image-1.png)
+![Создание задачи](./readme-images/image-1.png)
 
 # Функционал
 - Добавление задачи
