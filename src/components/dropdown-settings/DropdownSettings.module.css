@@ -1,0 +1,47 @@
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    list-style: none;
+    padding: 4px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 5px !important;
+    z-index: 10;
+    box-sizing: content-box;
+}
+
+.dropdown-item {
+    position: relative; 
+    padding: 4px;
+    cursor: pointer;
+}
+
+.dropdown-item > span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(175, 175, 175, 0.5);
+    border-radius: 4px;
+}
+
+.extra {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.submenu-container {
+    position: absolute;
+    left: 100%; /* Позиционируем справа от родительского li */
+    top: -5px;   /* Немного сдвигаем вверх для красивого выравнивания */
+    z-index: 11; /* Должен быть выше основного меню */
+    padding-left: 4px; /* Небольшой отступ от края */
+}

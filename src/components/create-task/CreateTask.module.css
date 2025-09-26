@@ -1,0 +1,113 @@
+.close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: gray;
+    padding-inline: 12px;
+    display: flex;
+    align-items: center;
+}
+.close > svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.title {
+    margin-top: 6px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 500px;
+}
+
+.input-title__wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-title__wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.char-counter {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: hsl(0, 0%, 65%, 0.8);
+    height: 36px;
+    width: 70px;
+    border-radius: 0 6px 6px 0;
+    padding: 6px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+
+.create-form label {
+    font-size: 16px;
+    max-inline-size: fit-content;
+}
+.create-form input,
+.create-form textarea {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+.create-form input:focus,
+.create-form textarea:focus {
+    outline: none;
+    border: 1px solid #333;
+    &::placeholder {
+        color: transparent;
+    }
+}
+
+.create-form textarea {
+    resize: none;
+    height: 3lh;
+}
+
+.create-form input[id="deadline"] {
+    width: 200px;
+}
+
+.create-form__color {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.create-form__button-submit {
+    margin-top: 1lh;
+}
+
+.create-form__button-submit button {
+    border: transparent;
+    border-radius: 8px;
+    background: #151515;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.create-form__button-submit button:hover {
+    background: #1f1f1f;
+}
+
+.create-form__button-submit button:active {
+    background: #000;
+}

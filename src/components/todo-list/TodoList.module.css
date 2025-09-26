@@ -1,0 +1,149 @@
+.sort-container {
+    display: flex;
+    width: 70%;
+}
+
+.sortLabel {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 10px;
+}
+.sortCheckbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.customCheckbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sortLabel:hover .customCheckbox {
+    border-color: #2196f3;
+}
+
+.sortCheckbox:checked + .customCheckbox {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+
+.customCheckbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 30%;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.sortCheckbox:checked + .customCheckbox::after {
+    display: block;
+}
+
+.todo-list {
+    height: 480px;
+}
+
+.todo-container ul {
+    padding: 0;
+}
+
+.todo-container {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 100%;
+}
+
+@layer filter {
+    .filterLabel {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        position: relative;
+        margin-bottom: 10px;
+        margin-left: auto;
+    }
+
+    .filter {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-ms-expand {
+            display: none;
+        }
+
+        padding: 8px 32px 8px 12px;
+        width: 180px;
+
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+        color: #333;
+
+        cursor: pointer;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+    .filter:hover {
+        border-color: #000;
+    }
+
+    .filter:focus {
+        border-color: #000;
+        box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.2);
+    }
+    .filterLabel::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #555;
+
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: border-color 0.2s ease;
+    }
+
+    .filterLabel:hover::after {
+        border-top-color: #000;
+    }    
+
+    .filterOption:checked {
+        background-color: #2196f3;
+        color: #fff;
+    }
+
+}

@@ -1,0 +1,32 @@
+.my-task {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create__button {
+    border: transparent;
+    border-radius: 8px;
+    background: #151515;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.create__button:hover {
+    background: #1f1f1f;
+}
+
+.create__button:active {
+    background: #000;
+}
