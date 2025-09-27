@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTask } from "../../store/store-zustand";
-import { DropdownItem, Item } from "../../types";
+import { DropdownItem, Item, Statuses } from "../../types";
 import { Modal } from "../modal";
 import styles from "./TodoItem.module.css";
 import { DropdownSettings } from "../dropdown-settings";
@@ -74,7 +74,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({ item, number }) => {
 
     const handleChangeStatus = () => {
         try {
-            editTask(number, { ...item, status: nextStep });
+            editTask(number, { ...item, status: nextStep as Statuses});
         } catch (error) {
             alert(error);
         }
